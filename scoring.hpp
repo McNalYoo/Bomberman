@@ -5,7 +5,7 @@
 // Login   <mart_m@epitech.net>
 // 
 // Started on  Tue Jun  2 16:00:03 2015 Amaury Martineau
-// Last update Thu Jun  4 14:18:07 2015 Amaury Martineau
+// Last update Sat Jun  6 16:46:29 2015 Amaury Martineau
 //
 
 #ifndef _SCORING_HPP_
@@ -14,6 +14,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <boost/lexical_cast.hpp>
 
 typedef struct	s_ranking
 {
@@ -26,11 +27,9 @@ class Scoring
 {
 public:
   Scoring();
-  // Scoring(const Scoring &old);
   ~Scoring(); //lit la liste chainée et rempli le fichier puis delete la liste
-  /*void		setfirst(t_ranking* const&);
-    t_ranking	*getfirst() const;*/
-  //void	CheckRank(std::string &PlayerName, int PlayerScore);
+  int		CheckRank(std::string PlayerName, int PlayerScore);
+  void		DeleteLast();
   void		CreateList();
 private:
   t_ranking	*first;
