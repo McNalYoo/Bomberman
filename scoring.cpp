@@ -5,7 +5,7 @@
 // Login   <mart_m@epitech.net>
 // 
 // Started on  Tue Jun  2 15:56:14 2015 Amaury Martineau
-// Last update Sat Jun  6 16:53:13 2015 Amaury Martineau
+// Last update Sat Jun  6 16:54:36 2015 Amaury Martineau
 //
 
 #include "scoring.hpp"
@@ -133,15 +133,3 @@ int	Scoring::CheckRank(std::string PlayerName, int PlayerScore)
     }
   return(0);
 }
-
-int	main()
-{
-  Scoring	thescoring;
-
-  thescoring.CreateList();
-  thescoring.CheckRank("BEST", 1033);
-  thescoring.CheckRank("MID", 200);
-  thescoring.CheckRank("Last", 0);
-  return(0);
-}
-
