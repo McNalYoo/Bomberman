@@ -1,3 +1,13 @@
+//                                                                                                                                                                                                                                             
+// AObject.cpp for bomberman in /home/huoyun_k/rendu/bomberman                                                                                                                                                                                 
+//                                                                                                                                                                                                                                             
+// Made by Kevin Huo Yung Kai                                                                                                                                                                                                                  
+// Login   <huoyun_k@epitech.net>                                                                                                                                                                                                              
+//                                                                                                                                                                                                                                             
+// Started on  Sat Jun  6 22:13:24 2015 Kevin Huo Yung Kai                                                                                                                                                                                     
+// Last update Sat Jun  6 22:56:23 2015 Kevin Huo Yung Kai                                                                                                                                                                                     
+//
+
 #include "AObject.hh"
 
 AObject::AObject() : _position(0, 0, 0), _rotation(0, 0, 0), _scale(1, 1, 1)
