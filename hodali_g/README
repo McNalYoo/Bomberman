@@ -1,0 +1,9 @@
+Objet map cree:
+-deux constructeurs (map existante/map aleatoire)
+-getMap pour recup le tableau d'Aobjects de la map
+-addObject / deleteObject pour gerer les objets
+
+Au chargement d'une map, le GameEngine doit creer une new map()
+dans Update/draw au lieu de mettre a jour la propriete _objects contenue dans la classe on recuperer le tableau avec getMap et update/draw utilisent ce tableau
+
+Avant de changer de map penser à delete Map
