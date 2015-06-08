@@ -1,1 +1,5 @@
-Juste pour ce week-end en attendant que je trouve un AER lundi
+depot officiel cree ???
+Probleme avec ton loader. Il me faut un tableau ou je peux recuperer le X et Y et le type.
+Donc il me faut plutot une liste list<Case> ou la classe Case contiendrait un int x, int y, Type
+
+(gab) gros probleme pour loader la lib je sais pas si c'est mon pc mais il faudrait que je vois l'un de vous pour copier son depot
