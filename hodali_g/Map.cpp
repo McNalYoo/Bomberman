@@ -5,9 +5,12 @@
 // Login   <hodali_g@epitech.net>
 //
 // Started on  Sun Jun  7 16:26:22 2015 gabriel hodali
-// Last update Sun Jun  7 17:21:15 2015 gabriel hodali
+// Last update Mon Jun  8 17:04:56 2015 gabriel hodali
 //
 #include "Map.hh"
+#include <ctime>
+#include <cstdlib>
+#include <iostream>
 
 Map::Map(std::string const &name) //rajouter le param Option pour config la map
 {
@@ -30,23 +33,52 @@ Map::Map(std::string const &name) //rajouter le param Option pour config la map
   //placer les joueurs
 }
 
-Map::Map(int size)
+Map::Map(int size = 21)
 {
   int x = 0;
   int y = 0;
+  std::srand(std::time(0));
+  if (size < 4)
+    size = 21;
   _size_x = size;
   _size_y = size;
+
   while (y < _size_y)
     {
       while (x < _size_x)
 	{
-	  //generer chaque object aleatoirement
+	  if (y == 0 || y == size - 1)
+	    {
+	      AObject *newObj = new Cube();
+	      newObj->setPosition(new glm::vec3(x, 0, y));
+	      _objects.push_back(newObj);
+	    }
+	  else if (x == 0 || x == size - 1)
+	    {
+	      AObject *newObj = new Cube();
+	      newObj->setPosition(new glm::vec3(x, 0, y));
+	      _objects.push_back(newObj);
+	    }
+	  else
+	    addRandomly(x, y);
+	    //sinon creer aleatoirement un objet a telle position0
 	  x++;
 	}
       x = 0;
       y++;
     }
   //placer les joueurs
+}
+
+void	Map::addRandomly(const int x, const int y)
+{
+  int random = std::rand();
+  if (random % 2 == 0)
+    {
+      AObject *newObj = new Cube();
+      newObj->setPosition(new glm::vec3(x, 0, y));
+      _objects.push_back(newObj);
+    }
 }
 
 std::vector<AObject*>	Map::getMap()

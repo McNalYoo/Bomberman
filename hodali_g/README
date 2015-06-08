@@ -4,6 +4,12 @@ Objet map cree:
 -addObject / deleteObject pour gerer les objets
 
 Au chargement d'une map, le GameEngine doit creer une new map()
-dans Update/draw au lieu de mettre a jour la propriete _objects contenue dans la classe on recuperer le tableau avec getMap et update/draw utilisent ce tableau
+dans Update/draw du GameEngine au lieu de mettre a jour la propriete _objects contenue dans la classe on recuperer le tableau avec getMap et update/draw  en utilisant ce tableau
 
-Avant de changer de map penser à delete Map
+Avant de changer de map penser à delete Map puis swap sur le menu
+
+
+
+
+-toDO
+rajouter de l'aleatoire, tester que ca fonctionne, ajouter la recup du tableau decrivant la map dans un fichier
